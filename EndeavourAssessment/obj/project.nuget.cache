@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xb2q3A1XubsUtcCLr+o1wsQE/SRepX3KTlB5Od9R3qZ8ijyE8uaRgt2hEdrMmk3M7X04zsrG2kn9YjArNZRIMw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\steph\\source\\repos\\EndeavourAssessment\\EndeavourAssessment\\EndeavourAssessment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\steph\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
