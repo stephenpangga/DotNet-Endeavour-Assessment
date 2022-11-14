@@ -12,8 +12,10 @@ namespace Domain
         public string? interest { get; set; }
 
         /// <summary>
-        /// The json serialize.deserialize for datetime in the format of dd/mm/yyyy is not converting correctly, there i did it manually by collecting it as a string and then converting to datetime.
-        /// there is probably a better way to do it but i decided to focus on other part of the assignment because i quite couldnt find the problem in the background of the process..
+        /// The json serialize.deserialize for datetime in the format of dd/mm/yyyy is not converting correctly, 
+        /// there i did it manually by collecting it as a string and then converting to datetime.
+        /// there is probably a better way to do it but i decided to focus on other part of the assignment 
+        /// because i quite couldnt find the problem in the background of the process..
         /// </summary>
         public string? date_of_birth 
         { 
@@ -54,5 +56,23 @@ namespace Domain
             this.account = account;
             this.credit_card = creditCard;
         }*/
+
+
+
+        public bool CheckAge(DateTime birthDate)
+        {
+            DateTime dateToday = DateTime.Today;
+
+            int age = Convert.ToInt32(dateToday.Year - birthDate.Year);
+
+            if (dateToday < birthDate.AddYears(age))
+                age--;
+
+            if (age > 18 && age < 65)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

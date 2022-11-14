@@ -11,6 +11,7 @@ namespace Domain
     public enum CreditCardType
     {
         Visa=0,
+
         MasterCard=1,
 
         [Description("American Express")]
