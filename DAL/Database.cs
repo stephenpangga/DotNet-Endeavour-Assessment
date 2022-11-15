@@ -56,7 +56,7 @@ namespace DAL
             }
             catch (MySqlException e)
             {
-                return null;
+                //return null;
                 throw e;
             }
             finally

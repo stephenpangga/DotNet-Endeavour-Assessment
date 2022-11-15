@@ -14,8 +14,6 @@ namespace EndeavourAssessment
         static async Task Main(string[] args)
         {
             Console.WriteLine("Endeavour Assessment");
-            Program program = new Program();
-            
             var host = new HostBuilder()
                 .ConfigureServices((hostContext, services) => services.AddHostedService<ShutdownService>())
                 .UseConsoleLifetime()

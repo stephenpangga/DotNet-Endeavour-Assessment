@@ -13,13 +13,13 @@ namespace Infrastructure
     {
         Person person = new Person();
 
-        public void ReadJsonFile(/*file as input*/)
+        public List<Person> ReadJsonFile(string filename)
         {
             Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
 
             List<Person> ListOfPeople = new List<Person>();
 
-            using (FileStream s = File.Open("challenge.json", FileMode.Open))
+            using (FileStream s = File.Open(filename, FileMode.Open))
             using (StreamReader sr = new StreamReader(s))
             using (JsonReader reader = new JsonTextReader(sr))
             {
@@ -28,26 +28,19 @@ namespace Infrastructure
                     // deserialize only when there's "{" character in the stream
                     if (reader.TokenType == JsonToken.StartObject)
                     {
-                        Person o = serializer.Deserialize<Person>(reader);
+                        Person p = serializer.Deserialize<Person>(reader);
 
-                        if (o.dateOfBirth == null || person.CheckAge((DateTime)o.dateOfBirth) == true)
+                        if (p.dateOfBirth == null || person.CheckAge((DateTime)p.dateOfBirth) == true)
                         {
-                            ListOfPeople.Add(o);
+                            ListOfPeople.Add(p);
                         }
                     }
                 }
             }
 
-            foreach (Person a in ListOfPeople)
-            {
-                //if(a.name == "Evelyn Pollich")
-                //{
-                //Console.WriteLine(a.dateOfBirth);
-                //}
-                //d.InsertUserToDb(a);
-            }
+            Console.WriteLine("There are {0} amount of users", ListOfPeople.Count() );
 
-            Console.WriteLine(ListOfPeople.Count());
+            return ListOfPeople;
         }
     }
 }

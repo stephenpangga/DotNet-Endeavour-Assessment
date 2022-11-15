@@ -51,3 +51,5 @@ C:\Users\steph\source\repos\EndeavourAssessment\EndeavourAssessment\bin\Debug\ne
 C:\Users\steph\source\repos\EndeavourAssessment\EndeavourAssessment\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\steph\source\repos\EndeavourAssessment\EndeavourAssessment\bin\Debug\net6.0\Infrastructure.dll
 C:\Users\steph\source\repos\EndeavourAssessment\EndeavourAssessment\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\steph\source\repos\EndeavourAssessment\EndeavourAssessment\bin\Debug\net6.0\DAL.dll
+C:\Users\steph\source\repos\EndeavourAssessment\EndeavourAssessment\bin\Debug\net6.0\DAL.pdb
